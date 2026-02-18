@@ -53,14 +53,14 @@ out/
 Windows (cmd):
 
 ```bat
-git clone <REPO_URL>
+git clone https://github.com/NeewMeta88/llm-agent-synth-datasets
 cd llm-agent-synth-datasets
 ```
 
 macOS/Linux:
 
 ```bash
-git clone <REPO_URL>
+git clone https://github.com/NeewMeta88/llm-agent-synth-datasets
 cd llm-agent-synth-datasets
 ```
 

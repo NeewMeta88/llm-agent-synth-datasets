@@ -29,13 +29,13 @@ jobs:
         run: python -m pytest -q
 
       - name: Generate support dataset
-        run: python -m dataset_generator generate --input examples/example_input_raw_support.md --out out_ci/support --seed 42 --llm-provider none
+        run: python -m dataset_generator --input examples/example_input_raw_support_faq_and_tickets.md --out out_ci/support --seed 42 --llm-provider none
 
       - name: Validate support dataset
         run: python -m dataset_generator validate --out out_ci/support
 
       - name: Generate operator quality dataset
-        run: python -m dataset_generator generate --input examples/example_input_raw_operator_quality.md --out out_ci/operator_quality --seed 42 --llm-provider none
+        run: python -m dataset_generator --input examples/example_input_raw_operator_quality_checks.md --out out_ci/operator_quality --seed 42 --llm-provider none
 
       - name: Validate operator quality dataset
         run: python -m dataset_generator validate --out out_ci/operator_quality
