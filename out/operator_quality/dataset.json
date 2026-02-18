@@ -1,0 +1,472 @@
+{
+  "examples": [
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, понимаю, сейчас проверю и дам ответ.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcucoperatorquality-tone-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Держите себя в руках, мы заняты.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "test_case_id": "tc_ucoperatorquality-tone",
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, запустил проверку, вернусь с результатом в ближайшее время.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcucoperatorquality-tone2-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Проверка запущена, сроки непонятны.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__2"
+      ],
+      "test_case_id": "tc_ucoperatorquality-tone_2",
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Вернусь с ответом после проверки.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcucoperatorquality-edgecase-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Проблема с доступом к заказу.",
+            "role": "user"
+          },
+          {
+            "content": "Уточните детали, пожалуйста.",
+            "role": "assistant"
+          },
+          {
+            "content": "Ответ будет когда-нибудь позже.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__3"
+      ],
+      "test_case_id": "tc_ucoperatorquality-edgecase",
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Проверю списание и сообщу статус. Шаги: проверю заявку, сверю данные, сообщу результат.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcuc-complexity-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Проблема с доступом к заказу.",
+            "role": "user"
+          },
+          {
+            "content": "Сейчас разберемся.",
+            "role": "assistant"
+          },
+          {
+            "content": "Дважды списали? Бывает. Подождите.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "test"
+      },
+      "policy_ids": [
+        "pol__4"
+      ],
+      "test_case_id": "tc_uc-complexity",
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Исправим ситуацию и уточним результат. Шаги: проверю заявку, сверю данные, сообщу результат.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc-complexity2-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Мы все исправим, просто ждите.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__5"
+      ],
+      "test_case_id": "tc_uc-complexity_2",
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Проверю доступ и подскажу дальнейшие шаги. Шаги: проверю заявку, сверю данные, сообщу результат.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc-complexity3-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Не могу помочь, у меня нет доступа.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__6"
+      ],
+      "test_case_id": "tc_uc-complexity_3",
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, вернусь с ответом после проверки.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcuc2-tone-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Не могу войти в аккаунт.",
+            "role": "user"
+          },
+          {
+            "content": "Проверка уже идет.",
+            "role": "assistant"
+          },
+          {
+            "content": "Ответ будет когда-нибудь позже.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__7"
+      ],
+      "test_case_id": "tc_uc2-tone",
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Исправим ситуацию и уточним результат. Уточню сроки и условия проверки.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc2-clarity-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Мы все исправим, просто ждите.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "test"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "test_case_id": "tc_uc2-clarity",
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, запустил проверку, вернусь с результатом в ближайшее время.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc2-tone2-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Проверка запущена, сроки непонятны.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "test"
+      },
+      "policy_ids": [
+        "pol__2"
+      ],
+      "test_case_id": "tc_uc2-tone_2",
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Проверю списание и сообщу статус. Уточню сроки и условия проверки.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcuc3-clarity-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Как изменить тариф?",
+            "role": "user"
+          },
+          {
+            "content": "Сейчас разберемся.",
+            "role": "assistant"
+          },
+          {
+            "content": "Дважды списали? Бывает. Подождите.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__3"
+      ],
+      "test_case_id": "tc_uc3-clarity",
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Понимаю, сейчас проверю и дам ответ. Если потребуется, запрошу дополнительные детали.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc3-coverage-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Держите себя в руках, мы заняты.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__4"
+      ],
+      "test_case_id": "tc_uc3-coverage",
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, сейчас уточню детали и помогу разобраться.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcuc3-tone-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Где статус тикета?",
+            "role": "user"
+          },
+          {
+            "content": "Проверим и вернемся с ответом.",
+            "role": "assistant"
+          },
+          {
+            "content": "Ваш вопрос не по адресу, сами разберитесь.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__5"
+      ],
+      "test_case_id": "tc_uc3-tone",
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, сейчас уточню детали и помогу разобраться.",
+      "format": "dialog_last_turn_correction",
+      "id": "ex_tcuc4-tone-dialoglastturncorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Сроки ответа слишком долгие.",
+            "role": "user"
+          },
+          {
+            "content": "Проверка уже идет.",
+            "role": "assistant"
+          },
+          {
+            "content": "Ваш вопрос не по адресу, сами разберитесь.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": 2
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__6"
+      ],
+      "test_case_id": "tc_uc4-tone",
+      "use_case_id": "uc__4"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Пожалуйста, понимаю, сейчас проверю и дам ответ.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc4-tone2-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Держите себя в руках, мы заняты.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__7"
+      ],
+      "test_case_id": "tc_uc4-tone_2",
+      "use_case_id": "uc__4"
+    },
+    {
+      "case": "operator_quality",
+      "evaluation_criteria": [
+        "grammar",
+        "clarity",
+        "tone"
+      ],
+      "expected_output": "Понимаю, сейчас проверю и дам ответ. Шаги: проверю заявку, сверю данные, сообщу результат.",
+      "format": "single_utterance_correction",
+      "id": "ex_tcuc4-complexity-singleutterancecorrection",
+      "input": {
+        "messages": [
+          {
+            "content": "Держите себя в руках, мы заняты.",
+            "role": "operator"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "test_case_id": "tc_uc4-complexity",
+      "use_case_id": "uc__4"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "policies": [
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 14,
+          "line_start": 14,
+          "quote": "* Сообщение должно быть вежливым, без грубости, без сарказма.  "
+        }
+      ],
+      "id": "pol_",
+      "statement": "Сообщение должно быть вежливым, без грубости, без сарказма.",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 15,
+          "line_start": 15,
+          "quote": "* Нельзя использовать капслок и слишком много восклицательных знаков.  "
+        }
+      ],
+      "id": "pol__2",
+      "statement": "Нельзя использовать капслок и слишком много восклицательных знаков.",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 9,
+          "line_start": 9,
+          "quote": "1. **Сообщение оператора само по себе** (без контекста диалога): орфография/пунктуация, корректность формулировок, tone of voice, запрещённые слова, корректные названия лекарств и т.п.  "
+        }
+      ],
+      "id": "pol__3",
+      "statement": "Нужно исправлять явные опечатки и пунктуацию.",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 9,
+          "line_start": 9,
+          "quote": "1. **Сообщение оператора само по себе** (без контекста диалога): орфография/пунктуация, корректность формулировок, tone of voice, запрещённые слова, корректные названия лекарств и т.п.  "
+        }
+      ],
+      "id": "pol__4",
+      "statement": "Допускаются медицинские термины и названия лекарств (их нельзя “исправлять” в бытовые слова).",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 18,
+          "line_start": 18,
+          "quote": "* Если пользователь матерится — оператор не должен отвечать матом, должен сохранять нейтральный тон."
+        }
+      ],
+      "id": "pol__5",
+      "statement": "Если пользователь матерится — оператор не должен отвечать матом, должен сохранять нейтральный тон.",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 22,
+          "line_start": 22,
+          "quote": "* Если пользователь просит “номер врача” — оператор не должен давать личный номер, а предлагает запись/общий номер клиники.  "
+        }
+      ],
+      "id": "pol__6",
+      "statement": "Если пользователь просит “номер врача” — оператор не должен давать личный номер, а предлагает запись/общий номер клиники.",
+      "type": "must"
+    },
+    {
+      "case": "operator_quality",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 24,
+          "line_start": 24,
+          "quote": "* Если пользователь просит отменить запись — оператор должен уточнить идентификатор (ФИО/дату/время) и подтвердить отмену."
+        }
+      ],
+      "id": "pol__7",
+      "statement": "Если пользователь просит отменить запись — оператор должен уточнить идентификатор (ФИО/дату/время) и подтвердить отмену.",
+      "type": "must"
+    }
+  ]
+}

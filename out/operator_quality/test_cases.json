@@ -1,0 +1,184 @@
+{
+  "test_cases": [
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_ucoperatorquality-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_ucoperatorquality-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__2"
+      ],
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: edge_case",
+      "id": "tc_ucoperatorquality-edgecase",
+      "parameters": {
+        "axis": "edge_case"
+      },
+      "policy_ids": [
+        "pol__3"
+      ],
+      "use_case_id": "uc_operatorquality"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_uc-complexity",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol__4"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_uc-complexity_2",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol__5"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_uc-complexity_3",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol__6"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc2-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__7"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: clarity",
+      "id": "tc_uc2-clarity",
+      "parameters": {
+        "axis": "clarity"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc2-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__2"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: clarity",
+      "id": "tc_uc3-clarity",
+      "parameters": {
+        "axis": "clarity"
+      },
+      "policy_ids": [
+        "pol__3"
+      ],
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: coverage",
+      "id": "tc_uc3-coverage",
+      "parameters": {
+        "axis": "coverage"
+      },
+      "policy_ids": [
+        "pol__4"
+      ],
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc3-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__5"
+      ],
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc4-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__6"
+      ],
+      "use_case_id": "uc__4"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc4-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol__7"
+      ],
+      "use_case_id": "uc__4"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_uc4-complexity",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "use_case_id": "uc__4"
+    }
+  ]
+}

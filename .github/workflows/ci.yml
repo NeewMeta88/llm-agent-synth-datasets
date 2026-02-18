@@ -1,0 +1,44 @@
+﻿name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Generate support dataset
+        run: python -m dataset_generator generate --input examples/example_input_raw_support.md --out out_ci/support --seed 42 --llm-provider none
+
+      - name: Validate support dataset
+        run: python -m dataset_generator validate --out out_ci/support
+
+      - name: Generate operator quality dataset
+        run: python -m dataset_generator generate --input examples/example_input_raw_operator_quality.md --out out_ci/operator_quality --seed 42 --llm-provider none
+
+      - name: Validate operator quality dataset
+        run: python -m dataset_generator validate --out out_ci/operator_quality
+
+      - name: Run official validator (if present)
+        run: python scripts/run_official_validator.py --support-out out_ci/support --operator-out out_ci/operator_quality

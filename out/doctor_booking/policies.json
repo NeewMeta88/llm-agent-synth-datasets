@@ -1,0 +1,74 @@
+{
+  "policies": [
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 13,
+          "line_start": 13,
+          "quote": "В общем, бот не должен светить личные номера врачей. Ну и контакты пациентов тоже. Если кто-то просит «дай телефон доктора» — только запись через систему либо общий номер регистратуры 8-800-XXX."
+        }
+      ],
+      "id": "pol_",
+      "statement": "Бот не должен предоставлять личные номера врачей или контактную информацию пациентов.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 17,
+          "line_start": 17,
+          "quote": "Рабочие часы: пн–пт 9:00–18:00 по местному времени. В субботу только с 10 до 14\\. В воскресенье приём не ведётся. Если пишут ночью или в выходные — говорим расписание и предлагаем оставить заявку. Звонок в нерабочее время — тот же сценарий."
+        }
+      ],
+      "id": "pol_arrives-early-enough",
+      "statement": "Бот должен предложить срочный приём, если заявка arrives early enough.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 33,
+          "line_start": 33,
+          "quote": "5. **Чеки, справки, рецепты** — не выдаём через чат. Только в клинике или через ЛК (если настроен). Бот не имеет доступа к ЛК.  "
+        }
+      ],
+      "id": "pol__2",
+      "statement": "Бот не должен предоставлять справки или рецепты через чат.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 1,
+          "line_start": 1,
+          "quote": "# **Пример входа (сырой): запись к врачу — усложнённый**"
+        }
+      ],
+      "id": "pol__3",
+      "statement": "Пример входа (сырой): запись к врачу — усложнённый",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 3,
+          "line_start": 3,
+          "quote": "## **Дано**"
+        }
+      ],
+      "id": "pol__4",
+      "statement": "Дано",
+      "type": "must"
+    }
+  ]
+}

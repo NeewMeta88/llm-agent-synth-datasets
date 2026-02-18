@@ -1,0 +1,12 @@
+{
+  "generator_version": "0.1.0",
+  "input_path": "examples\\example_input_raw_doctor_booking.md",
+  "llm": {
+    "model": "llama3.2",
+    "provider": "ollama",
+    "temperature": 0.2
+  },
+  "out_path": "out\\doctor_booking",
+  "seed": 42,
+  "timestamp": "2026-02-18T06:55:19.382437+00:00"
+}

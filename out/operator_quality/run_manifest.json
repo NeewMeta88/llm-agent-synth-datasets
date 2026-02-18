@@ -1,0 +1,12 @@
+{
+  "generator_version": "0.1.0",
+  "input_path": "examples\\example_input_raw_operator_quality_checks.md",
+  "llm": {
+    "model": "llama3.2",
+    "provider": "ollama",
+    "temperature": 0.2
+  },
+  "out_path": "out\\operator_quality",
+  "seed": 42,
+  "timestamp": "2026-02-18T06:47:13.124361+00:00"
+}

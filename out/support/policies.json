@@ -1,0 +1,74 @@
+{
+  "policies": [
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 15,
+          "line_start": 15,
+          "quote": "* Если вопрос требует действий/данных из личного кабинета — бот должен **передать на оператора** или **дать телефон поддержки** (не придумывать данные).  "
+        }
+      ],
+      "id": "pol_the-support-bot-does-not-have-access-to-the-clients-personal-data-or-account-information",
+      "statement": "The support bot does not have access to the client's personal data or account information.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 15,
+          "line_start": 15,
+          "quote": "* Если вопрос требует действий/данных из личного кабинета — бот должен **передать на оператора** или **дать телефон поддержки** (не придумывать данные).  "
+        }
+      ],
+      "id": "pol_if-a-question-requires-action-or-data-from-the-clients-account-the-bot-must-forward-the-request-to-an-operator-or-provide-the-clients-phone-number",
+      "statement": "If a question requires action or data from the client's account, the bot must forward the request to an operator or provide the client's phone number.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 16,
+          "line_start": 16,
+          "quote": "* Длина жизни диалога обычно: 2 сообщения (вопрос → ответ), но иногда пользователь задаёт уточнение.  "
+        }
+      ],
+      "id": "pol_the-length-of-a-conversation-is-typically-2-messages-question-answer-but-may-be-longer-if-the-user-asks-for-clarification",
+      "statement": "The length of a conversation is typically 2 messages (question → answer), but may be longer if the user asks for clarification.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 17,
+          "line_start": 17,
+          "quote": "* В обращениях могут быть: сленг, мат, смайлики, пустые сообщения, вопросы не по теме, попытки “сломать” бота."
+        }
+      ],
+      "id": "pol_conversations-may-contain-slang-profanity-emojis-empty-messages-or-questions-that-are-not-relevant-to-the-topic",
+      "statement": "Conversations may contain slang, profanity, emojis, empty messages, or questions that are not relevant to the topic.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 1,
+          "line_start": 1,
+          "quote": "# **Пример входа (сырой): FAQ \\+ выгрузка обращений**"
+        }
+      ],
+      "id": "pol_faq",
+      "statement": "Пример входа (сырой): FAQ + выгрузка обращений",
+      "type": "must"
+    }
+  ]
+}

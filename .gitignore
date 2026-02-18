@@ -1,0 +1,25 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# PyCharm
+.idea/
+*.iml
+
+# Envs
+.env
+.venv/
+venv/
+ENV/

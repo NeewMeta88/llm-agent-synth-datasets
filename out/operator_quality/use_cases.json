@@ -1,0 +1,74 @@
+{
+  "use_cases": [
+    {
+      "case": "operator_quality",
+      "description": "Проверка качества работы оператора медкомпании",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 9,
+          "line_start": 9,
+          "quote": "1. **Сообщение оператора само по себе** (без контекста диалога): орфография/пунктуация, корректность формулировок, tone of voice, запрещённые слова, корректные названия лекарств и т.п.  "
+        }
+      ],
+      "id": "uc_operatorquality",
+      "name": "operator_quality"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Пример входа (сырой): проверки качества оператора (контекстные/бесконтекстные)",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 1,
+          "line_start": 1,
+          "quote": "# **Пример входа (сырой): проверки качества оператора (контекстные/бесконтекстные)**"
+        }
+      ],
+      "id": "uc_",
+      "name": "Пример входа (сырой): проверки качества оператора (контекстные/бесконтекстные)"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Дано",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 3,
+          "line_start": 3,
+          "quote": "## **Дано**"
+        }
+      ],
+      "id": "uc__2",
+      "name": "Дано"
+    },
+    {
+      "case": "operator_quality",
+      "description": "Нужно сделать “агента”, который проверяет качество работы оператора медкомпании (оператор записывает клиентов к врачам, подбирает клинику и т.п.).",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 5,
+          "line_start": 5,
+          "quote": "Нужно сделать “агента”, который проверяет качество работы оператора медкомпании (оператор записывает клиентов к врачам, подбирает клинику и т.п.)."
+        }
+      ],
+      "id": "uc__3",
+      "name": "Нужно сделать “агента”, который проверяет качество работы оператора медкомпании (оператор записывает клиентов к врачам, подбирает клинику и т.п.)."
+    },
+    {
+      "case": "operator_quality",
+      "description": "Агент проверяет:",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_operator_quality_checks.md",
+          "line_end": 7,
+          "line_start": 7,
+          "quote": "Агент проверяет:"
+        }
+      ],
+      "id": "uc__4",
+      "name": "Агент проверяет:"
+    }
+  ]
+}

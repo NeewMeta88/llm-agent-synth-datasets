@@ -1,0 +1,74 @@
+{
+  "use_cases": [
+    {
+      "case": "support_bot",
+      "description": "The support bot responds to customer inquiries and provides assistance.",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 15,
+          "line_start": 15,
+          "quote": "* Если вопрос требует действий/данных из личного кабинета — бот должен **передать на оператора** или **дать телефон поддержки** (не придумывать данные).  "
+        }
+      ],
+      "id": "uc_supportbot",
+      "name": "support_bot"
+    },
+    {
+      "case": "support_bot",
+      "description": "Пример входа (сырой): FAQ + выгрузка обращений",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 1,
+          "line_start": 1,
+          "quote": "# **Пример входа (сырой): FAQ \\+ выгрузка обращений**"
+        }
+      ],
+      "id": "uc_faq",
+      "name": "Пример входа (сырой): FAQ + выгрузка обращений"
+    },
+    {
+      "case": "support_bot",
+      "description": "Дано",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 3,
+          "line_start": 3,
+          "quote": "## **Дано**"
+        }
+      ],
+      "id": "uc_",
+      "name": "Дано"
+    },
+    {
+      "case": "support_bot",
+      "description": "Мы делаем чат-бота техподдержки, который отвечает на вопросы клиентов как оператор поддержки.",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 5,
+          "line_start": 5,
+          "quote": "Мы делаем чат-бота техподдержки, который отвечает на вопросы клиентов как оператор поддержки."
+        }
+      ],
+      "id": "uc__2",
+      "name": "Мы делаем чат-бота техподдержки, который отвечает на вопросы клиентов как оператор поддержки."
+    },
+    {
+      "case": "support_bot",
+      "description": "Источники знаний:",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_support_faq_and_tickets.md",
+          "line_end": 7,
+          "line_start": 7,
+          "quote": "Источники знаний:"
+        }
+      ],
+      "id": "uc__3",
+      "name": "Источники знаний:"
+    }
+  ]
+}

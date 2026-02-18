@@ -1,0 +1,184 @@
+{
+  "test_cases": [
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_ucsupportbot-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_the-support-bot-does-not-have-access-to-the-clients-personal-data-or-account-information"
+      ],
+      "use_case_id": "uc_supportbot"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_ucsupportbot-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_if-a-question-requires-action-or-data-from-the-clients-account-the-bot-must-forward-the-request-to-an-operator-or-provide-the-clients-phone-number"
+      ],
+      "use_case_id": "uc_supportbot"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: edge_case",
+      "id": "tc_ucsupportbot-edgecase",
+      "parameters": {
+        "axis": "edge_case"
+      },
+      "policy_ids": [
+        "pol_the-length-of-a-conversation-is-typically-2-messages-question-answer-but-may-be-longer-if-the-user-asks-for-clarification"
+      ],
+      "use_case_id": "uc_supportbot"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_ucfaq-complexity",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol_conversations-may-contain-slang-profanity-emojis-empty-messages-or-questions-that-are-not-relevant-to-the-topic"
+      ],
+      "use_case_id": "uc_faq"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_ucfaq-complexity_2",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol_faq"
+      ],
+      "use_case_id": "uc_faq"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_ucfaq-complexity_3",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol_the-support-bot-does-not-have-access-to-the-clients-personal-data-or-account-information"
+      ],
+      "use_case_id": "uc_faq"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_if-a-question-requires-action-or-data-from-the-clients-account-the-bot-must-forward-the-request-to-an-operator-or-provide-the-clients-phone-number"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: clarity",
+      "id": "tc_uc-clarity",
+      "parameters": {
+        "axis": "clarity"
+      },
+      "policy_ids": [
+        "pol_the-length-of-a-conversation-is-typically-2-messages-question-answer-but-may-be-longer-if-the-user-asks-for-clarification"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_conversations-may-contain-slang-profanity-emojis-empty-messages-or-questions-that-are-not-relevant-to-the-topic"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: clarity",
+      "id": "tc_uc2-clarity",
+      "parameters": {
+        "axis": "clarity"
+      },
+      "policy_ids": [
+        "pol_faq"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: coverage",
+      "id": "tc_uc2-coverage",
+      "parameters": {
+        "axis": "coverage"
+      },
+      "policy_ids": [
+        "pol_the-support-bot-does-not-have-access-to-the-clients-personal-data-or-account-information"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc2-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_if-a-question-requires-action-or-data-from-the-clients-account-the-bot-must-forward-the-request-to-an-operator-or-provide-the-clients-phone-number"
+      ],
+      "use_case_id": "uc__2"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc3-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_the-length-of-a-conversation-is-typically-2-messages-question-answer-but-may-be-longer-if-the-user-asks-for-clarification"
+      ],
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc3-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_conversations-may-contain-slang-profanity-emojis-empty-messages-or-questions-that-are-not-relevant-to-the-topic"
+      ],
+      "use_case_id": "uc__3"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: complexity",
+      "id": "tc_uc3-complexity",
+      "parameters": {
+        "axis": "complexity"
+      },
+      "policy_ids": [
+        "pol_faq"
+      ],
+      "use_case_id": "uc__3"
+    }
+  ]
+}
