@@ -14,6 +14,16 @@
 
 ---
 
+## Стек
+
+- Python 3.13
+- Typer
+- Pydantic
+- JSON Schema + jsonschema
+- Ollama через OpenAI SDK
+
+---
+
 ## Ожидаемая структура результатов
 
 После генерации в репозитории должны появиться директории:
@@ -333,3 +343,199 @@ python -m dataset_generator \
 
 - Это ожидаемо при недоступной/не настроенной LLM.
 - Проверьте `run_manifest.json` в папке соответствующего прогона.
+
+---
+
+## Пример вывода
+
+### 1) dataset.json
+
+```json
+{
+      "case": "support_bot",
+      "evaluation_criteria": [
+        "helpfulness",
+        "clarity",
+        "politeness"
+      ],
+      "expected_output": "Мы признательны за обращение к нам. Важно для нас здоровье и благополучие вашего ребенка. Кто может предоставить больше информации о проблемах, с которыми сталкивается ваш ребенок?",
+      "format": "single_turn_qa",
+      "id": "ex_tcuc2-complexity-tickets",
+      "input": {
+        "messages": [
+          {
+            "content": "ребёнку 10 лет, к педиатру",
+            "role": "user"
+          }
+        ],
+        "target_message_index": null
+      },
+      "metadata": {
+        "source": "tickets",
+        "split": "train"
+      },
+      "policy_ids": [
+        "pol__3"
+      ],
+      "test_case_id": "tc_uc2-complexity",
+      "use_case_id": "uc__2"
+    }
+```
+
+### 2) policies.json
+
+```json
+"policies": [
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 13,
+          "line_start": 13,
+          "quote": "В общем, бот не должен светить личные номера врачей. Ну и контакты пациентов тоже. Если кто-то просит «дай телефон доктора» — только запись через систему либо общий номер регистратуры 8-800-XXX."
+        }
+      ],
+      "id": "pol_",
+      "statement": "Бот не должен предоставлять личные номера врачей или контактную информацию пациентов.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 17,
+          "line_start": 17,
+          "quote": "Рабочие часы: пн–пт 9:00–18:00 по местному времени. В субботу только с 10 до 14\\. В воскресенье приём не ведётся. Если пишут ночью или в выходные — говорим расписание и предлагаем оставить заявку. Звонок в нерабочее время — тот же сценарий."
+        }
+      ],
+      "id": "pol_arrives-early-enough",
+      "statement": "Бот должен предложить срочный приём, если заявка arrives early enough.",
+      "type": "must"
+    },
+    {
+      "case": "support_bot",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 33,
+          "line_start": 33,
+          "quote": "5. **Чеки, справки, рецепты** — не выдаём через чат. Только в клинике или через ЛК (если настроен). Бот не имеет доступа к ЛК.  "
+        }
+      ],
+      "id": "pol__2",
+      "statement": "Бот не должен предоставлять справки или рецепты через чат.",
+      "type": "must"
+    }
+```
+
+### 3) test_cases.json
+
+```bash
+"test_cases": [
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc-tone",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: tone",
+      "id": "tc_uc-tone_2",
+      "parameters": {
+        "axis": "tone"
+      },
+      "policy_ids": [
+        "pol_arrives-early-enough"
+      ],
+      "use_case_id": "uc_"
+    },
+    {
+      "case": "support_bot",
+      "description": "Test case focusing on axis: edge_case",
+      "id": "tc_uc-edgecase",
+      "parameters": {
+        "axis": "edge_case"
+      },
+      "policy_ids": [
+        "pol__2"
+      ],
+      "use_case_id": "uc_"
+    }
+```
+
+### 4) use_cases.json
+
+```bash
+"use_cases": [
+    {
+      "case": "support_bot",
+      "description": "Пользователь пишет заявку на приём к врачу.",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 17,
+          "line_start": 17,
+          "quote": "Рабочие часы: пн–пт 9:00–18:00 по местному времени. В субботу только с 10 до 14\\. В воскресенье приём не ведётся. Если пишут ночью или в выходные — говорим расписание и предлагаем оставить заявку. Звонок в нерабочее время — тот же сценарий."
+        }
+      ],
+      "id": "uc_",
+      "name": "Запись на приём"
+    },
+    {
+      "case": "support_bot",
+      "description": "Пользователь хочет отменить или перенести свою запись.",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 30,
+          "line_start": 30,
+          "quote": "2. **Можно ли отменить?** Да. Нужны ФИО и дата/время приёма. Ну или номер записи, если есть.  "
+        }
+      ],
+      "id": "uc__2",
+      "name": "Отмена или перенос записи"
+    },
+    {
+      "case": "support_bot",
+      "description": "Пользователь задает вопрос, который бот должен ответить.",
+      "evidence": [
+        {
+          "input_file": "example_input_raw_doctor_booking.md",
+          "line_end": 29,
+          "line_start": 29,
+          "quote": "1. **Как записаться?** Через сайт, чат или по телефону 8-800-XXX. В чате — напишите желаемую дату, время, специализацию (терапевт, кардиолог и т.д.).  "
+        }
+      ],
+      "id": "uc__3",
+      "name": "Вопросы и ответы"
+    }
+    
+```
+
+### 5) run_manifest.json
+
+```bash
+{
+  "generator_version": "0.1.0",
+  "input_path": "examples\\example_input_raw_doctor_booking.md",
+  "llm": {
+    "model": "llama3.2",
+    "provider": "ollama",
+    "temperature": 0.2
+  },
+  "out_path": "out\\doctor_booking",
+  "seed": 42,
+  "timestamp": "2026-02-18T06:55:19.382437+00:00"
+}
+
+```
+
